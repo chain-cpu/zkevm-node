@@ -1,0 +1,38 @@
+[Log]
+Level = "debug"
+Outputs = ["stdout"]
+
+[Database]
+Database = "postgres"
+User = "test_user"
+Password = "test_password"
+Name = "test_db"
+Host = "zkevm-bridge-db"
+Port = "5432"
+MaxConns = 20
+
+[Etherman]
+L1URL = "https://goerli.infura.io/v3/51b9e8dcfe094e32986354b4fe93210a"
+L2URLs = ["http://zkevm-json-rpc:8123"]
+
+[Synchronizer]
+SyncInterval = "1s"
+SyncChunkSize = 100
+GrpcURL = "zkevm-broadcast:61090"
+
+[BridgeController]
+Store = "postgres"
+Height = 32
+
+[BridgeServer]
+GRPCPort = "9090"
+HTTPPort = "8080"
+
+[NetworkConfig]
+GenBlockNumber = 8394550
+PoEAddr = "0x724BC7dbf314a594FD4431114fABA0509d909a00"
+BridgeAddr = "0x3E045275356F51B24c7334ff9c9f2b4c4DC13AF2"
+GlobalExitRootManAddr = "0xB76CeAD264b572Fe5fe45d8670473f7f1faaEd9B"
+MaticAddr = "0x377e3b6D5Ab299CE1f2E6b85196fd4B7A50EC30b"
+L2BridgeAddrs = ["0x9d98deabc42dd696deb9e40b4f1cab7ddbf55988"]
+L1ChainID = 5
